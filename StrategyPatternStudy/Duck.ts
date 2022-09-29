@@ -10,6 +10,15 @@ export default abstract class Duck {
 
     constructor() {}
 
+    // Duck 슈퍼 클래스에서 setter를 설정해서 인스턴스 동작 중간에 오리의 행동을 바꿀 수 있도록 함
+    public setFlyBehavior(fb: FlyBehavior) {
+        this.flyBehavior = fb
+    }
+
+    public setQuackBehavior(qb: QuackBehavior) {
+        this.quackBehavior = qb
+    }
+
     // 오리 클래스에 perform 메소드를 만들어서 참조되는 객체의 행동을 위임한다.
     // 꽥꽥거리는 행동을 하고 싶을 때는 슈퍼 클래스에서 객체의 종류에는 전혀 신경쓰지 않고 참조되는 객체에서 꽥꽥거리도록 하면 된다.
     public performQuack(): string {
