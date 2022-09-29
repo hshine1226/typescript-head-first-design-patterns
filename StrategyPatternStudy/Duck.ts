@@ -1,4 +1,4 @@
-import FlyBehavior from './FlyBehavior.ts/FlyBehavior'
+import FlyBehavior from './FlyBehaviors/FlyBehavior'
 import QuackBehavior from './QuackBehavior/QuackBehavior'
 
 // Duck 이라는 슈퍼클래스 작성

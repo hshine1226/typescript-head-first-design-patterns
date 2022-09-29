@@ -1,5 +1,5 @@
 import Duck from '../Duck'
-import FlyWithWings from '../FlyBehavior.ts/FlyWithWings'
+import FlyWithWings from '../FlyBehaviors/FlyWithWings'
 import Quack from '../QuackBehavior/Quack'
 
 export default class MallardDuck extends Duck {
