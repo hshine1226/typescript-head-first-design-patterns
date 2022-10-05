@@ -7,6 +7,6 @@ export default class Espresso extends Beverage {
     }
 
     public cost(): number {
-        return super.cost() + 3000
+        return 3000
     }
 }

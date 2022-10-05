@@ -6,6 +6,6 @@ export default class HouseBlend extends Beverage {
         this.description = '하우스 블렌드'
     }
     public cost(): number {
-        return super.cost() + 3500
+        return 3500
     }
 }

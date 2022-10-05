@@ -6,6 +6,6 @@ export default class DarkRoast extends Beverage {
         this.description = '다크로스팅 커피!'
     }
     public cost(): number {
-        return super.cost() + 2500
+        return 2500
     }
 }

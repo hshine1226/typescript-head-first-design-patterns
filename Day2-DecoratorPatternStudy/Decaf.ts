@@ -6,6 +6,6 @@ export default class Decaf extends Beverage {
         this.description = '디카페인 커피'
     }
     public cost(): number {
-        return super.cost() + 4000
+        return 4000
     }
 }
