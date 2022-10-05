@@ -8,6 +8,7 @@ export class SimplePizzaFactory {
     public createPizza(type: string): Pizza {
         let pizza: Pizza
 
+        // 이 부분에서만 유일하게 구상 클래스 참조 (new keyword)
         if (type === 'cheese') pizza = new CheesePizza()
         else if (type === 'pepperoni') pizza = new PepperoniPizza()
         else if (type === 'clam') pizza = new ClamPizza()
