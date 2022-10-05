@@ -1,5 +1,5 @@
 export default abstract class Beverage {
-    private description: string
+    public description: string
     private milk: boolean
     private milkPrice: number
     private soy: boolean
@@ -7,7 +7,7 @@ export default abstract class Beverage {
     private mocha: boolean
     private mochaPrice: number
     private whip: boolean
-    private ingredientPrice: number
+    private condimentPrice: number
 
     constructor() {
         this.milk = false
@@ -17,7 +17,7 @@ export default abstract class Beverage {
         this.mocha = false
         this.mochaPrice = 200
         this.whip = false
-        this.ingredientPrice = 0
+        this.condimentPrice = 0
     }
 
     public getDescription(): string {
@@ -59,15 +59,15 @@ export default abstract class Beverage {
 
     public cost(): number {
         if (this.hasMilk()) {
-            this.ingredientPrice += this.milkPrice
+            this.condimentPrice += this.milkPrice
         }
         if (this.hasSoy()) {
-            this.ingredientPrice += this.soyPrice
+            this.condimentPrice += this.soyPrice
         }
         if (this.hasMocha()) {
-            this.ingredientPrice += this.mochaPrice
+            this.condimentPrice += this.mochaPrice
         }
 
-        return this.ingredientPrice
+        return this.condimentPrice
     }
 }
