@@ -2,6 +2,6 @@ import Beverage from './Beverage'
 
 export default class Decaf extends Beverage {
     public cost(): number {
-        return 4000
+        return super.cost() + 4000
     }
 }
