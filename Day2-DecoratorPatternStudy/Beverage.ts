@@ -1,7 +1,7 @@
-enum Size {
-    TALL,
-    GRANDE,
-    VENTI
+export enum Size {
+    TALL = 'TALL',
+    GRANDE = 'GRANDE',
+    VENTI = 'VENTI'
 }
 export default abstract class Beverage {
     public description: string
