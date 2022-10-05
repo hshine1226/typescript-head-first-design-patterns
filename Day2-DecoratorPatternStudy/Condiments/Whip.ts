@@ -1,5 +1,5 @@
 import Beverage from '../Beverage'
-import CondimentDecorator from '../CondimentDecorator'
+import CondimentDecorator from './CondimentDecorator'
 
 export default class Whip extends CondimentDecorator {
     constructor(beverage: Beverage) {
