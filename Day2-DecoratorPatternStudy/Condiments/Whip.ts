@@ -1,4 +1,4 @@
-import Beverage from '../Beverage'
+import Beverage, { Size } from '../Beverage'
 import CondimentDecorator from './CondimentDecorator'
 
 export default class Whip extends CondimentDecorator {
@@ -12,6 +12,16 @@ export default class Whip extends CondimentDecorator {
     }
 
     public cost(): number {
-        return this.beverage.cost() + 100
+        let cost = this.beverage.cost()
+        if (this.beverage.getSize() === Size.TALL) {
+            cost += 150
+        }
+        if (this.beverage.getSize() === Size.GRANDE) {
+            cost += 200
+        }
+        if (this.beverage.getSize() === Size.VENTI) {
+            cost += 250
+        }
+        return cost
     }
 }
