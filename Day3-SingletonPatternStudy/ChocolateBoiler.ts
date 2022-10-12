@@ -1,14 +1,14 @@
 export class ChocolateBoiler {
     private empty: boolean
     private boiled: boolean
-    private uniqueInstance: ChocolateBoiler
+    private static uniqueInstance: ChocolateBoiler
 
     private constructor() {
         this.empty = true
         this.boiled = false
     }
 
-    public getInstance(): ChocolateBoiler {
+    public static getInstance(): ChocolateBoiler {
         if (!this.uniqueInstance) this.uniqueInstance = new ChocolateBoiler()
         return this.uniqueInstance
     }
