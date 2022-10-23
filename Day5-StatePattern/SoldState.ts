@@ -27,4 +27,7 @@ export default class SoldState implements IState {
             this.gumballMachine.setState(this.gumballMachine.getSoldOutState())
         }
     }
+    refill(): void {
+        console.log('매진 상태가 아닙니다.')
+    }
 }

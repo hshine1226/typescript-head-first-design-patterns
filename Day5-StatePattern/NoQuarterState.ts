@@ -21,4 +21,7 @@ export default class NoQuarterState implements IState {
     dispense(): void {
         console.log('먼저 동전을 넣어주세요.')
     }
+    refill(): void {
+        console.log('매진 상태가 아닙니다.')
+    }
 }

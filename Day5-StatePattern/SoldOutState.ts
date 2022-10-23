@@ -2,7 +2,10 @@ import GumballMachine from './GumballMachine'
 import IState from './IState'
 
 export default class SoldOutState implements IState {
-    constructor(gumballMachine: GumballMachine) {}
+    gumballMachine: GumballMachine
+    constructor(gumballMachine: GumballMachine) {
+        this.gumballMachine = gumballMachine
+    }
 
     instertQuarter(): void {
         console.log('매진이에요! 동전을 넣을 수 없어요.')
@@ -15,5 +18,8 @@ export default class SoldOutState implements IState {
     }
     dispense(): void {
         console.log('알맹이가 없어요...(매진)')
+    }
+    refill(): void {
+        this.gumballMachine.setState(this.gumballMachine.getNoQuarterState())
     }
 }

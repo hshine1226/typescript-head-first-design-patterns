@@ -43,6 +43,7 @@ export default class GumballMachine {
 
     turnCrank() {
         this.state.turnCrank()
+        this.state.dispense()
     }
 
     setState(state: IState) {
@@ -79,5 +80,13 @@ export default class GumballMachine {
         if (this.count > 0) {
             this.count -= 1
         }
+    }
+
+    refill(count: number) {
+        this.count += count
+        console.log(
+            `기계에 코인이 리필되었습니다. 지금 코인 개수는 ${this.count} 입니다.`
+        )
+        this.state.refill()
     }
 }

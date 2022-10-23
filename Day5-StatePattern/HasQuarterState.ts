@@ -33,4 +33,7 @@ export default class HasQuarterState implements IState {
     dispense(): void {
         console.log('알맹이를 내보낼 수 없어요. 먼저 손잡이를 돌려주세요.')
     }
+    refill(): void {
+        console.log('매진 상태가 아닙니다.')
+    }
 }

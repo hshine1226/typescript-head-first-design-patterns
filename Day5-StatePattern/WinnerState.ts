@@ -35,4 +35,7 @@ export default class WinnerState implements IState {
             }
         }
     }
+    refill(): void {
+        console.log('매진 상태가 아닙니다.')
+    }
 }
