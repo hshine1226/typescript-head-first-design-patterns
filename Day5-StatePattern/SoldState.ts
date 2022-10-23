@@ -13,8 +13,9 @@ export default class SoldState implements IState {
     ejectQuarter(): void {
         console.log('이미 알맹이를 뽑았어요.')
     }
-    turnCrank(): void {
+    turnCrank(): boolean {
         console.log('손잡이는 한 번만 돌릴 수 있어요.')
+        return false
     }
     dispense(): void {
         this.gumballMachine.releaseBall()

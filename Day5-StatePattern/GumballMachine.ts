@@ -25,7 +25,6 @@ export default class GumballMachine {
 
         this.count = numberGumballs
 
-        //
         if (numberGumballs > 0) {
             this.state = this.noQuarterState
         } else {
@@ -42,8 +41,7 @@ export default class GumballMachine {
     }
 
     turnCrank() {
-        this.state.turnCrank()
-        this.state.dispense()
+        if (this.state.turnCrank()) this.state.dispense()
     }
 
     setState(state: IState) {

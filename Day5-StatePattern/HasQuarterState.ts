@@ -22,13 +22,17 @@ export default class HasQuarterState implements IState {
         console.log('동전을 반환합니다.')
         this.gumballMachin.setState(this.gumballMachin.getNoQuarterState())
     }
-    turnCrank(): void {
+    turnCrank(): boolean {
         let winner: number = HasQuarterState.getRandomNumber()
         console.log('손잡이를 돌렸습니다.')
         // 10% 확률로 winnerState로 상태 전환
-        if (winner === 1 && this.gumballMachin.getCount() > 1)
+        if (winner === 1 && this.gumballMachin.getCount() > 1) {
             this.gumballMachin.setState(this.gumballMachin.getWinnerState())
-        else this.gumballMachin.setState(this.gumballMachin.getSoldState())
+            return true
+        } else {
+            this.gumballMachin.setState(this.gumballMachin.getSoldState())
+            return true
+        }
     }
     dispense(): void {
         console.log('알맹이를 내보낼 수 없어요. 먼저 손잡이를 돌려주세요.')

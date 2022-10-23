@@ -3,7 +3,7 @@
 export default interface IState {
     instertQuarter(): void
     ejectQuarter(): void
-    turnCrank(): void
+    turnCrank(): boolean
     dispense(): void
     refill(): void
 }

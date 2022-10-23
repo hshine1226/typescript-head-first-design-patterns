@@ -15,8 +15,9 @@ export default class NoQuarterState implements IState {
     ejectQuarter(): void {
         console.log('먼저 동전을 넣어주세요.')
     }
-    turnCrank(): void {
+    turnCrank(): boolean {
         console.log('먼저 동전을 넣어주세요.')
+        return false
     }
     dispense(): void {
         console.log('먼저 동전을 넣어주세요.')

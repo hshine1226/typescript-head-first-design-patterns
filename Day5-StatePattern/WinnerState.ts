@@ -12,8 +12,9 @@ export default class WinnerState implements IState {
     ejectQuarter(): void {
         console.log('알맹이를 내보내는 중입니다.')
     }
-    turnCrank(): void {
+    turnCrank(): boolean {
         console.log('알맹이를 내보내는 중입니다.')
+        return false
     }
     dispense(): void {
         this.gumballMachine.releaseBall()
