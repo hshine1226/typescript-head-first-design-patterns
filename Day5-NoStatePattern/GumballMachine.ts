@@ -15,6 +15,9 @@ export default class GumballMachine {
         }
     }
 
+    // 4가지 행동 정의 (동전 투입, 동전 반환, 송잡이 돌림, 알맹이 내보냄)
+
+    // 1. 동전 투입
     insertQuarter(): void {
         if (this.state === this.HAS_QUARTER)
             console.log('동전은 한 개만 넣어주세요.')
@@ -27,6 +30,7 @@ export default class GumballMachine {
             console.log('알맹이를 내보내고 있습니다.')
     }
 
+    // 2. 동전 반환
     ejectQuarter(): void {
         if (this.state === this.HAS_QUARTER) {
             console.log('동전이 반환됩니다.')
@@ -39,6 +43,7 @@ export default class GumballMachine {
             console.log('이미 알맹이를 뽑았어요.')
     }
 
+    // 3. 손잡이 돌림
     turnCrank(): void {
         if (this.state === this.HAS_QUARTER) {
             console.log('손잡이를 돌렸습니다.')
@@ -51,6 +56,7 @@ export default class GumballMachine {
             console.log('이미 알맹이를 뽑았어요.')
     }
 
+    // 4. 알맹이 내보냄
     dispense(): void {
         if (this.state === this.HAS_QUARTER) {
             console.log('손잡이를 먼저 돌려주세요.')
